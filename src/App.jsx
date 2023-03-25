@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="w-full">
-      <div className="dark:bg-gray-800 text-center text-2xl text-slate-600 bg-slate-100 w-full p-4 font-semibold text-primary-green-light dark:text-slate-200  border border-green-500 dark:border-primary-green-dark">
+      <div className="dark:bg-gray-800 rounded text-center text-2xl text-slate-600 bg-slate-100 w-full p-4 font-semibold text-primary-green-light dark:text-slate-200  border border-green-500 dark:border-primary-green-dark">
         بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ
       </div>
 

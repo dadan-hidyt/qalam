@@ -13,11 +13,11 @@ export default function Root() {
 
   return (
     <>
-      <nav className="p-3  border-b border-green-400 rounded-none sticky bg-green-300  dark:bg-gray-800 dark:border-gray-700">
+      <nav className="p-3 top-0 sticky  border-b border-green-400 rounded-none  bg-green-300  dark:bg-gray-800 dark:border-gray-700">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <a href="#" className="flex items-center">
-          📖 
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+          📖 &nbsp;
+            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white text-white">
               Qallam
             </span>
           </a>
@@ -59,6 +59,11 @@ export default function Root() {
                </Link>
               </li>
               <li>
+               <Link to='/donasi' className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+               💰 Donasi
+               </Link>
+              </li>
+              <li>
                <Link to='/doa-harian' className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">          
                 📖Do'a Do'a
                </Link>
@@ -71,12 +76,17 @@ export default function Root() {
                  ☪️ Imsyakiah
                 </a>
               </li>
+             
             </ul>
           </div>
         </div>
       </nav>
       <div className="container  w-11/12 mt-4 lg:w-10/12 mx-auto">
         <Outlet />
+      </div>
+      <div className="border-t border-b p-3 text-center w-full bottom-0 sticky bg-white border-green-500">
+           © 2023 dadanhidyt · Made with ❤️ in sumedang &nbsp;
+           <a target={'_blank'} className="bg-green-400 rounded text-white border border-green-500 p-1" href="https://trakteer.id/dadanskhidayat">Suport Saya</a>
       </div>
     </>
   );

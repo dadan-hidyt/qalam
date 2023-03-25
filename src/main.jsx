@@ -9,6 +9,7 @@ import Root from './Root'
 import Surahs from './Pages/Surahs'
 import axios from 'axios'
 import DoaHarian from './Pages/DoaHarian'
+import Donasi from './Pages/Donasi'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path : '/',
         element : <App/>,
+      },
+      {
+        path : '/donasi',
+        element : <Donasi/>
       },
       {
         path : '/surah/:nomor',
