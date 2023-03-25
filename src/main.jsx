@@ -10,6 +10,7 @@ import Surahs from './Pages/Surahs'
 import axios from 'axios'
 import DoaHarian from './Pages/DoaHarian'
 import Donasi from './Pages/Donasi'
+import Imsak from './Pages/Imsak'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path : '/donasi',
         element : <Donasi/>
+      },
+      {
+        path : '/imsak',
+        element : <Imsak/>
       },
       {
         path : '/surah/:nomor',

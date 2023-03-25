@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Outlet,Link } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 export default function Root() {
   const [MenuShow, setMenuShow] = useState(false);
 
@@ -16,7 +16,7 @@ export default function Root() {
       <nav className="p-3 top-0 sticky  border-b shadow border-green-500 rounded-none  bg-green-300  dark:bg-gray-800 dark:border-gray-700">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <a href="#" className="flex items-center">
-          📖 &nbsp;
+            📖 &nbsp;
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white text-gray-700">
               Qallam
             </span>
@@ -52,31 +52,41 @@ export default function Root() {
             }
             id="navbar-solid-bg"
           >
-            <ul className="flex flex-col mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">      
+            <ul className="flex flex-col mt-4 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
               <li>
-               <Link to='/' className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-               📓 Home
-               </Link>
-              </li>
-              <li>
-               <Link to='/donasi' className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-               💰 Donasi
-               </Link>
-              </li>
-              <li>
-               <Link to='/doa-harian' className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">          
-                📖Do'a Do'a
-               </Link>
-              </li>
-              <li>
-                <a
-                  href="https://dadan.imsak.sebayatech.my.id/"
+                <Link
+                  to="/"
                   className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
-                 ☪️ Imsyakiah
-                </a>
+                  📓 Home
+                </Link>
               </li>
-             
+              <li>
+                <Link
+                  to="/imsak"
+                  className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  ☪️ Imsyakiah
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/donasi"
+                  className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  💰 Donasi
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/doa-harian"
+                  className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >
+                  📖Do'a Do'a
+                </Link>
+              </li>
+
+            
             </ul>
           </div>
         </div>
@@ -85,10 +95,16 @@ export default function Root() {
         <Outlet />
       </div>
       <div className="border-t border-b p-3 text-center w-full bottom-0 mt-3 bg-white border-green-500">
-           © 2023 dadanhidyt · Made with ❤️ in sumedang
-           <div className="mt-3">
-           <a target={'_blank'} className="bg-green-400 rounded text-white border border-green-500 p-1" href="https://trakteer.id/dadanskhidayat/tip">Suport Saya</a>
-           </div>
+        © 2023 dadanhidyt · Made with ❤️ in sumedang
+        <div className="mt-3">
+          <a
+            target={"_blank"}
+            className="bg-green-400 rounded text-white border border-green-500 p-1"
+            href="https://trakteer.id/dadanskhidayat/tip"
+          >
+            Suport Saya
+          </a>
+        </div>
       </div>
     </>
   );
