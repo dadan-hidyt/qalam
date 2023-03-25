@@ -6,7 +6,7 @@ import {RouterProvider,createBrowserRouter} from 'react-router-dom'
 
 import './index.css'
 import Root from './Root'
-import Surahs from './Pages/Surahs'
+import Surah from './Pages/Surah'
 import axios from 'axios'
 import DoaHarian from './Pages/DoaHarian'
 import Donasi from './Pages/Donasi'
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path : '/surah/:nomor',
-        element : <Surahs/>,
+        element : <Surah/>,
         loader : async function({params}){
           const data = await axios.get('https://equran.id/api/v2/surat/'+params.nomor).then(res=>res.data.data);
           return data;

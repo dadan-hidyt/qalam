@@ -71,7 +71,7 @@ export default function Imsak() {
         <div className="w-full md:w-1/2 lg:w-4/12 p-2" key={x.tanggal}>
           <div
             
-            className="mb-4 bg-white border border-green-200 rounded sm:p-4 p-5 dark:bg-gray-800 dark:border-gray-700"
+            className="mb-4 bg-white border border-green-600 rounded sm:p-4 p-5 dark:bg-gray-800 dark:border-gray-700"
           >
             <div className="flex items-center justify-between mb-4">
               <h5 className="text-xl text-slate-500 leading-none text-gray-900 dark:text-white">
@@ -147,7 +147,7 @@ export default function Imsak() {
                   <div className="flex items-center space-x-4">
                     <div className="flex-1 min-w-0">
                       <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        MAGHRIBH
+                        MAGHRIB
                       </p>
                     </div>
                     <div className="inline-flex items-center text-base text-gray-900 dark:text-white">
@@ -179,9 +179,9 @@ export default function Imsak() {
     <>
       <div className="container">
         <div className="w-full">
-          <div className="bg-white border border-green-500 rounded shadow-sm mb-3 p-4 mt-4">
+          <div className="bg-white mb-3 mt-4">
             <div className="mt-4">
-              <div className="flex gap-3">
+              <div className="flex gap-3 p-3">
                 <div className="col-md-4">
                   <label className="block" htmlFor="form-label">
                     Pilih Provinsi
