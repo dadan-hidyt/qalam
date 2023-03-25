@@ -13,11 +13,11 @@ export default function Root() {
 
   return (
     <>
-      <nav className="p-3 top-0 sticky  border-b border-green-400 rounded-none  bg-green-300  dark:bg-gray-800 dark:border-gray-700">
+      <nav className="p-3 top-0 sticky  border-b shadow border-green-500 rounded-none  bg-green-300  dark:bg-gray-800 dark:border-gray-700">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <a href="#" className="flex items-center">
           📖 &nbsp;
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white text-white">
+            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white text-gray-700">
               Qallam
             </span>
           </a>
