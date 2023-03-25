@@ -181,7 +181,7 @@ export default function Imsak() {
         <div className="w-full">
           <div className="bg-white mb-3 mt-4">
             <div className="mt-4">
-              <div className="flex gap-3 p-3">
+              <div className="flex gap-3">
                 <div className="col-md-4">
                   <label className="block" htmlFor="form-label">
                     Pilih Provinsi

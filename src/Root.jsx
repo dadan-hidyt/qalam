@@ -85,27 +85,28 @@ export default function Root() {
                   📖Do'a Do'a
                 </Link>
               </li>
-
-            
             </ul>
           </div>
         </div>
       </nav>
-      <div className="container  w-11/12 mt-4 lg:w-10/12 mx-auto">
+      <div className="container mb-[20px] w-11/12 mt-4 lg:w-10/12 mx-auto">
         <Outlet />
       </div>
-      <div className="border-t border-b p-3 text-center w-full bottom-0 mt-3 bg-white border-green-500">
-        © 2023 dadanhidyt · Made with ❤️ in sumedang
-        <div className="mt-3">
-          <a
-            target={"_blank"}
-            className="bg-green-400 rounded text-white border border-green-500 p-1"
-            href="https://trakteer.id/dadanskhidayat/tip"
-          >
-            Suport Saya
+
+      <footer class="bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-green-300 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          © 2023{" "}
+          <a href="https://flowbite.com/" class="hover:underline">
+           dadanhidyt
           </a>
-        </div>
-      </div>
+          All Right
+        </span>
+        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+          <li>
+           <Link to={'/donasi'}>Donasi</Link>
+          </li>
+        </ul>
+      </footer>
     </>
   );
 }

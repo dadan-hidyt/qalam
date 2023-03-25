@@ -1,23 +1,39 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import formatDuarsi from "../Helpers";
 export default function Surah() {
   const data = useLoaderData();
-  const [played, setPlayed] = useState();
+  const [Played, setPlayed] = useState();
+  const [audioDuration, setAudioDuration] = useState(null);
   let audios = null;
   for (let i in data.audioFull) {
     audios = data.audioFull[i];
   }
-  let audio = new Audio(audios);
   function putarAudio() {
+    const audio = document.getElementById("audioMurotal");
     if (audio.currentTime === audio.duration) {
       audio.currentTime = 0;
     }
     if (audio.paused) {
+      setPlayed(true);
       audio.play();
     } else {
       audio.pause();
+      setPlayed(false);
     }
   }
+
+  useEffect(() => {
+    const audio = document.getElementById("audioMurotal");
+    audio.addEventListener("timeupdate", () => {
+      if (audio.currentTime === audio.duration) {
+        setPlayed(false);
+      }
+      setAudioDuration(
+        formatDuarsi(audio.currentTime) + " : " + formatDuarsi(audio.duration)
+      );
+    });
+  });
 
   return (
     <>
@@ -29,12 +45,17 @@ export default function Surah() {
           {data.arti} - {data.jumlahAyat} Ayat - {data.tempatTurun}
         </div>
         <button
+          id="btnStart"
           onClick={putarAudio}
           type="button"
-          className="bg-white  border text-green-400 border-green-600 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+          className="text-2xl"
         >
-          Play
+          {Played ? "⏸️" : "▶️"}
         </button>
+        <audio className="hidden" id="audioMurotal" src={audios}></audio>
+        <small className={Played ? "show block" : " hidden block"}>
+          {audioDuration}
+        </small>
       </div>
 
       <div className="text-slate-600 mb-3 rounded shadow-sm border border-green-500 text-center text-2xl mt-4 p-4">
