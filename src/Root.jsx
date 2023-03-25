@@ -84,9 +84,11 @@ export default function Root() {
       <div className="container  w-11/12 mt-4 lg:w-10/12 mx-auto">
         <Outlet />
       </div>
-      <div className="border-t border-b p-3 text-center w-full bottom-0 sticky bg-white border-green-500">
-           © 2023 dadanhidyt · Made with ❤️ in sumedang &nbsp;
-           <a target={'_blank'} className="bg-green-400 rounded text-white border border-green-500 p-1" href="https://trakteer.id/dadanskhidayat">Suport Saya</a>
+      <div className="border-t border-b p-3 text-center w-full bottom-0 mt-3 bg-white border-green-500">
+           © 2023 dadanhidyt · Made with ❤️ in sumedang
+           <div className="mt-3">
+           <a target={'_blank'} className="bg-green-400 rounded text-white border border-green-500 p-1" href="https://trakteer.id/dadanskhidayat/tip">Suport Saya</a>
+           </div>
       </div>
     </>
   );
